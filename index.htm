@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+    <title>百科翻转效果</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="../../include/jquery-1.11.3.min.js"></script>
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="index_8.css" />
+    <script src="../../include/html5shiv.min.js"></script><![endif]-->
+</head>
+<body>
+    <section class="content baidu_ex" role="main">
+        <h1>效果展示</h1>
+        <p>层内显示均用百科截图代表，没有点击效果</p>
+        <div class="main">
+            <ul>
+                <% for (int i = 1; i <= 3; i++) { %>
+                <li>
+                    <div class="flip">
+                        <div class="back"><img src="images/0<%=i %>_n.jpg" /></div>
+                        <div class="front"><img src="images/0<%=i %>.jpg" /></div>
+                    </div>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </section>
+    <section class="content baidu_ex">
+        <h1>百科页面示例截图</h1>
+        <p>鼠标悬停，支持H5浏览器实现卡片翻转，显示背面内容</p>
+        <img src="images/baike.jpg" />
+    </section>
+    <section class="content Mixins"></section>
+    <!--[if lte IE 9]><script src="index_ie9.js"></script><![endif]-->
+    <script src="index.js"></script>
+</body>
+</html>

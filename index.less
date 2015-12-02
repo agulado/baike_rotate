@@ -1,0 +1,240 @@
+﻿@import "../common.less";
+
+.baidu_ex {
+    width:912px;
+    overflow:hidden;
+    padding-bottom:50px;
+}
+    .baidu_ex h1 {
+        font-size:20px;
+        padding:10px;
+        text-align:center;
+        color:rgba(202,54,43,1);
+    }
+    .baidu_ex p {
+        text-align:center;
+        padding:5px;
+        color:rgba(202,54,43,1);
+    }
+
+    .baidu_ex .main {
+        width:840px;
+        margin:0 auto;
+        .transform_rotateY(135deg);
+    }
+        .baidu_ex .main li {
+            float:left;
+            margin-left:21px;
+            width:266px;
+            height:494px;
+        }
+            .baidu_ex .main li:first-child {
+                margin-left:0;
+            }
+
+            .baidu_ex .main li div.flip {
+                width:100%;
+                height:494px;
+                position: relative;
+            }
+
+            @keyframes baidu_ex_flip_div_hide {
+                0% {
+                    .transform_rotateY(0);
+                    opacity:1;
+                }
+                50% {
+                    opacity:1;
+                }
+                51% {
+                    opacity:0;
+                }
+                100% {
+                    .transform_rotateY(-180deg);
+                    opacity:0;
+                }
+            }
+            @-webkit-keyframes baidu_ex_flip_div_hide {
+                0% {
+                    .transform_rotateY(0);
+                    opacity:1;
+                }
+                50% {
+                    opacity:1;
+                }
+                51% {
+                    opacity:0;
+                }
+                100% {
+                    .transform_rotateY(-180deg);
+                    opacity:0;
+                }
+            }
+            @-moz-keyframes baidu_ex_flip_div_hide {
+                0% {
+                    .transform_rotateY(0);
+                    opacity:1;
+                }
+                50% {
+                    opacity:1;
+                }
+                51% {
+                    opacity:0;
+                }
+                100% {
+                    .transform_rotateY(-180deg);
+                    opacity:0;
+                }
+            }
+            @-o-keyframes baidu_ex_flip_div_hide {
+                0% {
+                    .transform_rotateY(0);
+                    opacity:1;
+                }
+                50% {
+                    opacity:1;
+                }
+                51% {
+                    opacity:0;
+                }
+                100% {
+                    .transform_rotateY(-180deg);
+                    opacity:0;
+                }
+            }
+
+            @keyframes baidu_ex_flip_div_show {
+                0% {
+                    .transform_rotateY(-180deg);
+                    opacity:0;
+                }
+                50% {
+                    opacity:0;
+                }
+                51% {
+                    opacity:1;
+                }
+                100% {
+                    .transform_rotateY(0);
+                    opacity:1;
+                }
+            }
+            @-webkit-keyframes baidu_ex_flip_div_show {
+                0% {
+                    .transform_rotateY(-180deg);
+                    opacity:0;
+                }
+                50% {
+                    opacity:0;
+                }
+                51% {
+                    opacity:1;
+                }
+                100% {
+                    .transform_rotateY(0);
+                    opacity:1;
+                }
+            }
+            @-moz-keyframes baidu_ex_flip_div_show {
+                0% {
+                    .transform_rotateY(-180deg);
+                    opacity:0;
+                }
+                50% {
+                    opacity:0;
+                }
+                51% {
+                    opacity:1;
+                }
+                100% {
+                    .transform_rotateY(0);
+                    opacity:1;
+                }
+            }
+            @-o-keyframes baidu_ex_flip_div_show {
+                0% {
+                    .transform_rotateY(-180deg);
+                    opacity:0;
+                }
+                50% {
+                    opacity:0;
+                }
+                51% {
+                    opacity:1;
+                }
+                100% {
+                    .transform_rotateY(0);
+                    opacity:1;
+                }
+            }
+                @animation-duration:.4s;
+                @animation-iteration-count:1;
+                @animation-timing-function:ease-in-out;
+                @animation-fill-mode:forwards;
+                .baidu_ex .main li div.flip div.show {
+                    @animation-name:baidu_ex_flip_div_show;
+                    animation-name:@animation-name;
+                    animation-duration:@animation-duration;
+                    animation-iteration-count:@animation-iteration-count;
+                    animation-timing-function:@animation-timing-function;
+                    animation-fill-mode:@animation-fill-mode;
+                    -webkit-animation-name:@animation-name;
+                    -webkit-animation-duration:@animation-duration;
+                    -webkit-animation-iteration-count:@animation-iteration-count;
+                    -webkit-animation-timing-function:@animation-timing-function;
+                    -webkit-animation-fill-mode: @animation-fill-mode;
+                    -moz-animation-name:@animation-name;
+                    -moz-animation-duration:@animation-duration;
+                    -moz-animation-iteration-count:@animation-iteration-count;
+                    -moz-animation-timing-function:@animation-timing-function;
+                    -moz-animation-fill-mode:@animation-fill-mode;
+                }
+                .baidu_ex .main li div.flip div.hide  {
+                    @animation-name:baidu_ex_flip_div_hide;
+                    @animation-delay:0;
+                    animation-name:@animation-name;
+                    animation-delay:@animation-delay;
+                    animation-duration:@animation-duration;
+                    animation-iteration-count:@animation-iteration-count;
+                    animation-timing-function:@animation-timing-function;
+                    animation-fill-mode:@animation-fill-mode;
+                    -webkit-animation-name:@animation-name;
+                    -webkit-animation-delay:@animation-delay;
+                    -webkit-animation-duration:@animation-duration;
+                    -webkit-animation-iteration-count:@animation-iteration-count;
+                    -webkit-animation-timing-function:@animation-timing-function;
+                    -webkit-animation-fill-mode:@animation-fill-mode;
+                    -moz-animation-name:@animation-name;
+                    -moz-animation-delay:@animation-delay;
+                    -moz-animation-duration:@animation-duration;
+                    -moz-animation-iteration-count:@animation-iteration-count;
+                    -moz-animation-timing-function:@animation-timing-function;
+                    -moz-animation-fill-mode:@animation-fill-mode;
+                }
+
+            .baidu_ex .main li div.flip div {
+                position:absolute;
+                top:0;
+                left:0;
+                width:266px;
+                height:494px;
+            }
+            .baidu_ex .main li div.flip div.back {
+                cursor:pointer;
+                .transform_rotateY(-180deg);
+            }
+
+.Mixins {
+    display:none;
+    /*
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border: solid 1px #0094ff;
+    overflow: hidden;
+    .border-radius(20px);
+    z-index: 5;
+    */
+}
